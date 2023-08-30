@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart } from './CartSlice'; 
+import { removeFromCart } from './CartSlice';
 import './ProductDetails.css'
 
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.cart);// Assuming your cart slice is named 'cart'
+
+  const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleRemoveItem = (itemToRemove) => {
@@ -14,14 +15,13 @@ const Cart = () => {
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
 
-  console.log(cartItems);
   return (
     <div>
       <h2 className="title">Cart</h2>
       <div className="container">
         {cartItems?.map((item) => (
           <div key={item.id} className="detail_card">
-             <div className='detail_inner_card'>
+            <div className='detail_inner_card'>
               <img className='img' src={item.image} alt='' />
             </div>
             <div className='details_text_card'>

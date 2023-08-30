@@ -1,13 +1,13 @@
 
 const truncateDescription = (description, limit) => {
-    const words = description.split(' ');
-    if (words.length > limit) {
-      return words.slice(0, limit).join(' ') + '...';
-    }
-    return description;
-  };
-
-  export default  {
-    truncateDescription
+  const words = description.split(' ');
+  if (words.length > limit) {
+    return words.slice(0, limit).join(' ') + '...';
   }
+  return description;
+};
+
+export default {
+  truncateDescription
+}
 
