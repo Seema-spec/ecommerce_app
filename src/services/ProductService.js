@@ -1,7 +1,7 @@
 import axios from "axios";
 import _function from "../common/function";
 
-     const fetchProduct = async () => {
+     const fetchMovies = async () => {
         try {
           const response = await axios.get(`https://fakestoreapi.com/products`);
           return response.data;
@@ -21,7 +21,7 @@ import _function from "../common/function";
 
 
 export default {
-    fetchProduct,
+   fetchMovies,
     fetchProductById
 }
 
